@@ -14,11 +14,12 @@ class DaysOfWeek extends Enum {
 	public static $SUNDAY = 1;
 	// etc.
 }
-DaysOfWeek::enumerate();```
+DaysOfWeek::enumerate();
+```
 
 Type checking in practice:
 
-```
+```<?php
 function isMonday(DaysOfWeek $d) {
 	if ($d == DaysOfWeek::$MONDAY) {
 		return true;
@@ -28,4 +29,5 @@ function isMonday(DaysOfWeek $d) {
 }
 
 $day = DaysOfWeek::$MONDAY;
-echo (isMonday($day) ? "bummer it's monday" : "Yay! it's not monday");```
+echo (isMonday($day) ? "bummer it's monday" : "Yay! it's not monday");
+```
